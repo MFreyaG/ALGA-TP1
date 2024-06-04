@@ -30,7 +30,6 @@ plt.plot(x_values, y_values)
 # Add labels and title
 plt.xlabel('Tempo de execução')
 plt.ylabel('N')
-plt.title('My Plot')
 
 # Show the plot
 plt.show()
