@@ -1,3 +1,5 @@
+import time
+
 from miller_rabin import MillerRabin
 from gen_int import phi
 from bsgs import bsgs
@@ -6,6 +8,7 @@ miller_rabin = MillerRabin()
 n, a = int(input()), int(input())
 p = n+1
 
+start = time.time()
 iter_number = 0
 while 1:
     if (p % 2 == 1):
@@ -17,11 +20,13 @@ while 1:
             p += 1
     p += 1
 
-print(f'Menor primo "p" maior que "n": {p}')
-print(f'Miller-Rabin executado {iter_number} vezes')
+print(p)
 
 g = phi(p)
-print(f'Gerador do conjunto Z/nZ: {g}')
+print(g)
 
 log = bsgs(g, a, p)
-print(f'Logarítmo discreto: {log}')
+print(log)
+
+total_time = (time.time()-start) * 10**3
+print(f'{total_time}ms')
