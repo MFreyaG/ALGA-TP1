@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 
 # Define the data file
 
-data_filename = sys.argv[1]
-data_file = f'tests/output/{data_filename}'
+data_file = sys.argv[1]
+output_file = sys.argv[2]
 
 # Initialize empty lists for x and y values
 x_values = []
@@ -34,3 +34,4 @@ plt.title('My Plot')
 
 # Show the plot
 plt.show()
+plt.savefig(output_file)

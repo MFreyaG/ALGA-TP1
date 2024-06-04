@@ -5,11 +5,9 @@ from miller_rabin import MillerRabin
 from gen_int import phi
 from bsgs import bsgs
 
-input_filename = sys.argv[1]
-input_file = open(f'tests/input/{input_filename}', 'r')
+input_file = open(f'{sys.argv[1]}', 'r')
 
-output_filename = sys.argv[2]
-output_file = open(f'tests/output/{output_filename}', 'w')
+output_file = open(f'{sys.argv[2]}', 'w')
 
 test_case = 1
 while 1:
