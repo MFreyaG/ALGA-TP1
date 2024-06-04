@@ -1,3 +1,4 @@
+import time
 
 from math import ceil, sqrt
 
@@ -8,6 +9,7 @@ def mod_inverse(a, m):
     return -1
 
 def bsgs(g,a,p):
+    start_time = time.time()
     mod_size = len(bin(p-1)[2:])
 
     m = ceil(sqrt(p-1))
@@ -21,3 +23,6 @@ def bsgs(g,a,p):
         if temp in lookup_table:
             # x found
             return i*m + lookup_table[temp]
+        
+        if time.time() - start_time > 120:
+            return None

@@ -61,8 +61,7 @@ def phi( n) :
     phi = n - 1
  
     # Find prime factors of phi and store in a set 
-    findPrimefactors(s, phi) 
-    print("Found primes")
+    findPrimefactors(s, phi)
  
     # Check for every number from 2 to phi 
     for r in range(2, phi + 1): 
